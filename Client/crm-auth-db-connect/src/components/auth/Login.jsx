@@ -11,7 +11,7 @@ const Login = ({ onLogin }) => {
 
   // Create axios instance with base configuration
   const api = axios.create({
-    baseURL: 'https://crm-auth-backend.vercel.app/',
+    baseURL: 'http://localhost:5000',
     headers: {
       'Content-Type': 'application/json'
     }
@@ -23,7 +23,7 @@ const Login = ({ onLogin }) => {
     setError('');
     
     try {
-      const response = await axios.post('https://crm-auth-backend.vercel.app/api/auth/login', {
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
         email,
         password
       });

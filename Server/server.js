@@ -11,17 +11,17 @@ const app = express();
 //app.use(cors());
 
 // CORS Configuration
-const corsOptions = {
-  origin: 'https://crm-auth-frontend-mu.vercel.app/', // Replace with your frontend URL
+/*const corsOptions = {
+  origin: 'http://localhost:5174', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   optionsSuccessStatus: 200
-};
+};*///
 
 // Apply CORS middleware with options
-app.use(cors(corsOptions));
-//app.use(cors());
+//app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(bodyParser.json());
 
