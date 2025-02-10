@@ -31,6 +31,10 @@ mongoose
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error('MongoDB Atlas connection error:', err));
 
+  // Test API route
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from server!" });
+
 // Routes
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
