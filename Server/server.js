@@ -34,6 +34,7 @@ mongoose
   // Test API route
 app.get("/", (req, res) => {
   res.json({ message: "Hello from server!" });
+});
 
 // Routes
 const authRoutes = require('./routes/auth');
