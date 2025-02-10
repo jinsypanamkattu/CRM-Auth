@@ -1,14 +1,17 @@
 {
-  "name": "server",
+  "name": "crm-auth",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "CRM Authentication System",
+  "main": "Server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Server/server.js",
+    "dev": "nodemon Server/server.js",
+    "build": "npm install",
+    "vercel-build": "echo hello"
   },
-  "keywords": [],
+  "keywords": ["crm", "authentication", "express"],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -17,5 +20,11 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
