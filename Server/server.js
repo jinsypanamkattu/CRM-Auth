@@ -31,14 +31,14 @@ mongoose
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error('MongoDB Atlas connection error:', err));
 
-  // Test API route
-app.get("/", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
+  app.get("/api/hello", (req, res) => {
+    res.json({ message: "Hello from Vercel Backend!" });
+  });
 
 // Routes
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
+//app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));
+module.exports = app;
